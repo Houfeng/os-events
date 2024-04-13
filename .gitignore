@@ -1,0 +1,16 @@
+*.log
+*.d.ts
+*.db
+*.map
+.DS_Store
+.travis.yml
+.husky/
+node_modules/
+coverage/
+logs/
+lib/
+temp/
+types/
+release/
+assets/app/
+debug/

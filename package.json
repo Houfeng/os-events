@@ -1,0 +1,33 @@
+{
+  "name": "os-events",
+  "version": "0.1.3",
+  "description": "",
+  "main": "lib/index.js",
+  "types": "types/index.d.ts",
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org"
+  },
+  "scripts": {
+    "clean": " rm -rf ./lib/ &&  rm -rf ./types/",
+    "lint": "eslint --ext .ts ./src/ --fix ",
+    "build": "pnpm lint && pnpm clean && tsc",
+    "start": "pnpm build && node ./lib/demo.js",
+    "dev": "pnpm build && DEBUG=* node ./lib/demo.js",
+    "release": "pnpm build && npm pu"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^20.12.7",
+    "eslint": "8.52.0",
+    "eslint-config-noka": "*",
+    "ts-node": "^10.9.1",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^5.3.2"
+  },
+  "dependencies": {
+    "eify": "^4.0.4",
+    "tslib": "^2.6.2"
+  }
+}
